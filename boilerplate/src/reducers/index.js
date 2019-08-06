@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
-import * as reducer from "./reducer";
-
+import * as NetworkReducer from "./NetworkReducer";
+import * as LoaderReducer from './LoaderReducer';
+import * as ErrorReducer from './ErrorReducer';
 
 export default combineReducers(Object.assign(
-    reducer
+    NetworkReducer,
+    LoaderReducer,
+    ErrorReducer,
 ))

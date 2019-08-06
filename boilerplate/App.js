@@ -7,26 +7,16 @@
  */
 
 import React from 'react';
-
-import {
-  View,
-  Text,
-} from 'react-native';
-
 import { Provider } from 'react-redux';
+import AppContainer from './src/containers/AppContainer';
 import Store from './src/store';
-import Hehe from './src/containers/index';
 
 const App = () => {
   return (
-    <Provider store={Store}>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Hehe />
-      </View>
+    <Provider store={Store} >
+      <AppContainer />
     </Provider>
   );
 };
-
-
 
 export default App;
